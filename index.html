@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="tienich_mb">
+        <div class="container">
+            <div class="content">
+
+                <h2 class="title_project">TIỆN ÍCH DỰ ÁN</h2>
+
+                <p class="text-content">
+                </p>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div id="list_tienich" class="item active">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+         $(document).ready(function() {
+             getListTienIchTongthe();
+         });
+                           
+        var array_tongthe = [
+            "tổng the",
+            "sapphire 1",
+            "sapphire 2",
+            "vườn nhật",
+            "Công viên trung tâm",
+
+        ]
+        function getListTienIchTongthe() {
+
+            for (i = array_tongthe.length-1; i >= 0; i--) {
+                $("#list_tienich").prepend("<div id='scene_s" + i + " ' class='gallery' onclick='loadsceneTienich(this.id)'><a><img class='gallery_img' src='assets/img/" + i + ".jpg'><div class='desc'>" + array_tongthe[i] + "</div></a></div>");
+            }
+        }
+    </script>
+</body>
+</html>
